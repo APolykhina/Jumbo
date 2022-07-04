@@ -1,4 +1,4 @@
-import { appGetters, GET_SHOW } from "../../../../src/store";
+import { appGetters, GET_SHOW } from "@/store";
 
 const getShow = appGetters[GET_SHOW];
 

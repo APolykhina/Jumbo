@@ -1,4 +1,4 @@
-import { appMutations, CHANGE_SHOW_STATE } from "../../../../src/store";
+import { appMutations, CHANGE_SHOW_STATE } from "@/store";
 
 const setShow = appMutations[CHANGE_SHOW_STATE];
 

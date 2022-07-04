@@ -6,7 +6,7 @@ import {
   CHANGE_LOADING_STATE,
   CHANGE_STORES_STATE,
   mutations,
-} from "../../../../src/store";
+} from "@/store";
 
 const setStories = mutations[CHANGE_STORES_STATE];
 const setCities = mutations[CHANGE_CITIES_STATE];

@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import Button from "../../../src/components/views/Button.vue";
+import Button from "@/components/views/Button.vue";
 
 describe("ButtonVue", () => {
   it("Render button with corresponding name", () => {

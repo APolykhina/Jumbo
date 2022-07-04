@@ -1,4 +1,4 @@
-import { dataService } from "../../../src/API";
+import { dataService } from "@/API";
 
 const stores = [
   {

@@ -1,7 +1,7 @@
 import { createLocalVue, mount } from "@vue/test-utils";
 import Vuex from "vuex";
-import Cities from "../../../src/components/containers/Cities.vue";
-import { getters, mutations } from "../../../src/store";
+import Cities from "@/components/containers/Cities.vue";
+import { getters, mutations } from "@/store";
 
 const localVue = createLocalVue();
 localVue.use(Vuex);

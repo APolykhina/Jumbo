@@ -1,4 +1,4 @@
-import { errorService } from "../../../src/API";
+import { errorService } from "@/API";
 
 const responseError = {
   response: {

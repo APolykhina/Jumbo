@@ -6,13 +6,13 @@ import {
   CHANGE_COUNT_STATE,
   FETCH_STORES,
   CHANGE_ERROR_STATE,
-} from "../../../../src/store";
+} from "@/store";
 
 const fetchData = actions[FETCH_STORES];
 
 let mockError = false;
 
-jest.mock("../../../../src/api/requests", () => ({
+jest.mock("@/api/requests", () => ({
   getShops: () => {
     if (!mockError)
       return new Promise((resolve) =>

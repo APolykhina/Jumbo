@@ -1,8 +1,4 @@
-import {
-  GET_STORES,
-  getters,
-  GET_STORES_PER_CITY,
-} from "../../../../src/store";
+import { GET_STORES, getters, GET_STORES_PER_CITY } from "@/store";
 
 const getStores = getters[GET_STORES];
 const getStoresPerCity = getters[GET_STORES_PER_CITY];

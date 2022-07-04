@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import Shop from "../../../src/components/views/Shop.vue";
+import Shop from "@/components/views/Shop.vue";
 
 const shopWithCity = {
   uuid: "gssKYx4XJwoAAAFbn.BMqPTb",
