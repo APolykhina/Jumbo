@@ -12,7 +12,7 @@ const fetchData = actions[FETCH_STORES];
 
 let mockError = false;
 
-jest.mock("@/api/requests", () => ({
+jest.mock("@/API/requests", () => ({
   getShops: () => {
     if (!mockError)
       return new Promise((resolve) =>
