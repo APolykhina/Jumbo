@@ -4,18 +4,15 @@
     <b-row>
       <b-col>
         <h2>Cities</h2>
-        <b-list-group id="cities">
-          <b-list-group-item 
-          class="d-flex justify-content-between align-items-center" 
-          v-for="city in cities" :key="city"
-          v-on:click="changeFilteredValue(city)"
-          v-bind:active="filteredValue === city">
+        <b-list-group data-test="cities" id="cities">
+          <b-list-group-item class="d-flex justify-content-between align-items-center" v-for="city in cities" 
+          :key="city" :id="city" @click="changeFilteredValue(city)" v-bind:active="filteredValue === city">
             <h5>{{city}}</h5>
             <p>{{countOfStores[city]}}</p>
           </b-list-group-item>
         </b-list-group>
       </b-col>
-      <b-col v-if="stores.length">
+      <b-col data-test="stores" v-if="stores.length">
         <h2>Stores per city</h2>
         <b-list-group-item v-for="store in stores" :key="store.uuid">
             <Shop :shop="store" />
@@ -31,6 +28,7 @@ import { mapGetters, mapMutations } from 'vuex';
 import { mapFields} from 'vuex-map-fields';
 import {GET_STORES_PER_CITY, CHANGE_FILTERED_VALUE_STATE} from './../../store';
 import Shop from '../views/Shop.vue';
+import { BCol, BContainer, BListGroup, BListGroupItem, BRow } from 'bootstrap-vue';
 
 export default {
     name: "Cities",
@@ -46,7 +44,13 @@ export default {
         })
     },
     // components
-    components: { Shop },
+    components: { 
+      Shop: Shop, 
+      'b-list-group': BListGroup,
+      'b-col': BCol,
+      'b-row': BRow,
+      'b-container': BContainer,
+      'b-list-group-item': BListGroupItem },
     // methods
     methods: {
         ...mapMutations({

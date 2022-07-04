@@ -1,4 +1,5 @@
-import { GET_SHOW, CHANGE_SHOW_STATE } from "./types";
+import { appGetters } from "./getters";
+import { appMutations } from "./mutations";
 
 // MODULE FOR APP INFO
 export const App = {
@@ -8,19 +9,7 @@ export const App = {
     show: "",
   },
 
-  // GETTERS
-  // ---------------------
-  getters: {
-    [GET_SHOW]: (state) => {
-      return state.show;
-    },
-  },
+  getters: appGetters,
 
-  // MUTATIONS
-  // ---------------------
-  mutations: {
-    [CHANGE_SHOW_STATE]: (state, show) => {
-      state.show = show;
-    },
-  },
+  mutations: appMutations,
 };

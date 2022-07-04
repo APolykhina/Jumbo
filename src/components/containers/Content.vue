@@ -1,16 +1,16 @@
 <!--HTML-->
 <template>
   <div>
-    <div v-if="isLoading">
+    <div data-test="loading" v-if="isLoading">
         <h2>Loading data ...</h2>
     </div>
-    <div v-else-if="error">
+    <div data-test="error" v-else-if="error">
         <h2>Something wrong with getting data: {{error}}</h2>
     </div>
-    <div v-else-if="show === 'stores'">
+    <div data-test="stores" v-else-if="show === 'stores'">
         <Shops />
     </div>
-    <div v-else-if="show === 'cities'">
+    <div data-test="cities" v-else-if="show === 'cities'">
         <Cities />
     </div>
   </div>

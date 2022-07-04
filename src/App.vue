@@ -8,8 +8,8 @@
         </b-col>
         <b-col class="align-items-center d-flex text-center">
           <b-button-group >
-            <Button v-on:click.native="changeShow('stores')" info-name="Show stores"/>
-            <Button v-on:click.native="changeShow('cities')" info-name="Show cities"/>
+            <Button data-test="stores" v-on:click.native="changeShow('stores')" info-name="Show stores"/>
+            <Button data-test="cities" v-on:click.native="changeShow('cities')" info-name="Show cities"/>
           </b-button-group>
         </b-col>
       </b-row>     
@@ -25,14 +25,19 @@ import Header from './components/views/Header.vue';
 import Button from './components/views/Button.vue';
 import { mapMutations } from 'vuex';
 import { CHANGE_SHOW_STATE } from './store';
+import { BButtonGroup, BCol, BContainer, BRow } from 'bootstrap-vue';
 
 
 export default {
   name: "App",
   components: {
-    Header,
-    Button,
-    Content
+    Header: Header,
+    Button: Button,
+    Content: Content,
+    'b-container': BContainer,
+    'b-row': BRow,
+    'b-col': BCol,
+    'b-button-group': BButtonGroup
 },
   // methods handlers
   methods: {

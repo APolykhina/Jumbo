@@ -10,7 +10,7 @@ export const errorService = (error) => {
   }
   // something else
   else {
-    console.log("Error", error.message);
+    console.log(`Error: ${error.message}`);
   }
   return message;
 };

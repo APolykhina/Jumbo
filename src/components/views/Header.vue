@@ -6,8 +6,13 @@
 </template>
 
 <script>
+import { BJumbotron } from 'bootstrap-vue';
+
 export default {
   name: "Header",
+  components: {
+    'b-jumbotron': BJumbotron
+  }
 }
 </script>
 
